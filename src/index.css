@@ -6,9 +6,161 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  color: black !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.my-custom-select {	
+    margin-left: auto;
+    margin-right: auto;
+	padding-left:2px;
+	width:300px;
+	height:130px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	text-align:left;
+	border:1px solid lightgray;
+	color:black;
+	font-size:16px;
+}
+
+.my-custom-select:hover {
+	cursor:default;	
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+.my-custom-select:focus {
+	border-color: lightblue;
+}
+
+.selectable {
+	font-weight:normal;
+}
+
+.selectable:active {
+	background-color:lightblue;
+}
+
+.hidden {
+	display:none !important;
+}
+
+.spell-buttons {
+	margin: 5px;
+	font-size:14px;
+}
+
+.blue {
+	color:#30b0db;
+	font-weight:bold;
+	font-size: 18px;
+}
+
+.my-title {
+	text-align:center;
+	margin-top:10px;
+}
+
+.choice-boxes {
+	text-align:right;
+}
+
+.center {
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:10px;
+	font-size: 14px;
+}
+
+.choose {
+	margin-top:15px;
+	font-weight:bold;
+	font-size:18px;
+}
+
+.prep-label {
+	font-weight:bold;
+	font-size:18px;
+}
+
+.spell-slot-container {
+	text-align:middle;
+}
+
+.spell-slot {
+	border: 1px black solid;
+	border-radius: 5px;
+	box-shadow: 1px 4px gray;
+	min-width:95px;
+	height:88px;
+	margin-top: 22px;
+	margin-bottom:20px;
+	margin-right:5px;
+	padding-right:5px !important;
+	padding-left:5px !important;
+}
+
+.spell-slot:hover {
+	cursor:pointer;
+}
+
+.spell-slot:active {
+  box-shadow: 0px 2px gray;
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+
+.no-select {
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+}
+
+.spell-info-box {
+	max-width:350px;
+	height:200px;
+	border:1px solid lightgray;
+	padding:2px;
+	overflow-y:scroll;
+	text-align:left;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:20px;
+}
+
+.back-button {
+	float:right;
+	margin-left:-42.891px;
+	color:blue;
+	text-decoration:underline;
+}
+
+.back-button:hover {
+	cursor:pointer;
+	color:lightblue;
+}
+
+@media(max-width:575px){
+	.spell-slot{
+    	margin-right:auto;
+    	margin-left:auto; 
+		margin-top: 10px;
+		margin-bottom:5px; 
+    }
+	.spell-slot:active{
+		margin-top: 12px;
+		margin-bottom:3px; 
+    }
 }
