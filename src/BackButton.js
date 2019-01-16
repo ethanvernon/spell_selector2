@@ -21,7 +21,7 @@ export class BackButton extends Component {
 
 		return (
 			<div className="back-button no-select" onClick={this.handleClick}>
-				Home
+				Back
 			</div>
 		);
 	}

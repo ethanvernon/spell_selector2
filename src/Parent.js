@@ -128,11 +128,15 @@ export class Parent extends Component {
 	}
 
 	showPrevious(prev) {
+		//if on choose screen
 		if(prev==="home") {
 			this.setState({
 				chooseScreenHide: 'hidden',
-				startScreenHide: ''
+				startScreenHide: '',
+				numberPrepared: 0,
+				chosenSpells: []
 			});
+		//if on cast screen
 		} else {
 			this.setState({
 				castingScreenHide: 'hidden',
@@ -169,13 +173,14 @@ export class Parent extends Component {
 			}
 		}
 
+		//sort spells by level...they're already sorted alphabetically
 		domainSpellsArray = domainSpellsArray.sort(function(a,b) {
 			return a.level - b.level;
 		})
 
 		this.setState({
 			domainSpells: domainSpellsArray,
-			chosenSpells: domainSpellsArray,			
+			chosenSpells: domainSpellsArray,
 			activeSpell: domainSpellsArray[0]
 		});
 
@@ -235,7 +240,6 @@ export class Parent extends Component {
 
 	//called by SpellChoosing.js whenever a spell is clicked
 	//increases number of spells prepared by 1
-
 	updateSpellChoiceNumber(spell) {
 		let remaining = parseInt(this.state.numberPrepared);
 		let arr = JSON.parse(JSON.stringify(this.state.spellChoices));
