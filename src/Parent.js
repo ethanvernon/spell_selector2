@@ -140,8 +140,12 @@ export class Parent extends Component {
 		} else {
 			this.setState({
 				castingScreenHide: 'hidden',
-				chooseScreenHide: ''
-			});			
+				chooseScreenHide: '',
+				numberPrepared: 0,
+				chosenSpells: []
+			});
+			this.makeSpellChoiceArray();
+			this.chooseDomainSpells();
 		}
 	}
 
