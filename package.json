@@ -2,7 +2,7 @@
   "name": "spell_selector2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ethanvernon.github.io/spell_selector2",
+  "homepage": "https://ethanvernon.github.io/spell_selector2/",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "gh-pages": "^2.0.1",
